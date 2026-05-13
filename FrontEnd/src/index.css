@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Opcional: Adicione aqui uma fonte elegante se desejar futuramente */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
