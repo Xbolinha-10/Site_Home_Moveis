@@ -9,7 +9,7 @@ export function AdminSecreto() {
 
   // 1. Carregar produtos existentes
   const carregarProdutos = () => {
-    fetch('http://localhost:3001/produtos')
+    fetch('http://localhost:10000')
       .then(res => res.json())
       .then(data => setProdutos(data));
   };
@@ -28,7 +28,7 @@ export function AdminSecreto() {
     formData.append('preco', preco);
     formData.append('imagem', imagem);
 
-    await fetch('http://localhost:3001/produtos', {
+    await fetch('http://localhost:10000', {
       method: 'POST',
       body: formData
     });
@@ -41,7 +41,7 @@ export function AdminSecreto() {
   // 3. Deletar produto
   const handleDeletar = async (id: number) => {
     if (confirm("Tem certeza que deseja excluir este móvel?")) {
-      await fetch(`http://localhost:3001/produtos/${id}`, { method: 'DELETE' });
+      await fetch(`http://localhost:10000${id}`, { method: 'DELETE' });
       carregarProdutos();
     }
   };
@@ -91,7 +91,7 @@ export function AdminSecreto() {
               {produtos.map((p: any) => (
                 <tr key={p.id} className="border-b hover:bg-gray-50">
                   <td className="p-4">
-                    <img src={`http://localhost:3001${p.imagem}`} className="w-12 h-12 object-cover rounded" />
+                    <img src={`http://localhost:10000${p.imagem}`} className="w-12 h-12 object-cover rounded" />
                   </td>
                   <td className="p-4 font-medium">{p.nome}</td>
                   <td className="p-4">R$ {p.preco}</td>
