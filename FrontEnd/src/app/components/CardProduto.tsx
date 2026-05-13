@@ -15,6 +15,7 @@ export function CardProduto({ nome, preco, imagem, onComprar }: CardProdutoProps
         <img 
   src={`https://backend-home-moveis.onrender.com${imagem}`}
 alt={nome}
+className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
 />
         {/* Badge discreta de Disponível */}
         <div className="absolute top-3 left-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full">
