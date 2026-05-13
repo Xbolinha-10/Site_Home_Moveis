@@ -17,8 +17,11 @@ export function LandingPage() {
   }
 };
   useEffect(() => {
-    buscarProdutos();
-  }, []);
+  fetch('https://backend-home-moveis.onrender.com/produtos')
+    .then(res => res.json())
+    .then(data => setProdutos(data))
+    .catch(err => console.error("Erro ao carregar vitrine:", err));
+}, []);
 
   const abrirWhatsapp = (nomeProduto: string) => {
     const telefone = "5561999117694"; // Substitua pelo seu número real
