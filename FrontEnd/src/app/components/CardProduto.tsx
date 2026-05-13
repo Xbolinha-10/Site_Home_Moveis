@@ -13,10 +13,9 @@ export function CardProduto({ nome, preco, imagem, onComprar }: CardProdutoProps
       {/* Container da Imagem com efeito de zoom no hover */}
       <div className="aspect-3/4 overflow-hidden bg-gray-100 mb-6 relative">
         <img 
-          src={`http://localhost:3001${imagem}`} 
-          className="w-full h-full object-cover group-hover:scale-110 transition duration-700" 
-          alt={nome}
-        />
+  src={`https://backend-home-moveis.onrender.com${imagem}`}
+alt={nome}
+/>
         {/* Badge discreta de Disponível */}
         <div className="absolute top-3 left-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full">
            <span className="text-[10px] uppercase tracking-widest font-bold text-black">Disponível</span>
