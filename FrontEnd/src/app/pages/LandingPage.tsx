@@ -8,7 +8,7 @@ export function LandingPage() {
   const buscarProdutos = async () => {
   try {
     // O ?t=${Date.now()} obriga o navegador a pegar a versão MAIS NOVA do banco
-    const response = await fetch(`http://localhost:10000?t=${Date.now()}`);
+    const response = await fetch(`https://backend-home-moveis.onrender.com?t=${Date.now()}`);
     const data = await response.json();
     console.log("Dados do Servidor:", data); // Isso vai aparecer no F12
     setProdutos(data);
